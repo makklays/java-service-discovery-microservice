@@ -1,0 +1,22 @@
+
+Service Discovery - Netflix Eureka
+
+Netflix Eureka is a REST-based service that is primarily used for locating services for the purpose of load balancing
+and failover of middle-tier servers. It is a key component in microservices architecture, enabling services to discover
+each other without hard-coded IP addresses or DNS names.
+
+Key Features of Netflix Eureka:
+1. Service Registry: Eureka acts as a service registry where microservices can register themselves and discover other
+   services. Each service instance registers with Eureka, providing its metadata such as hostname, port, health status,
+   and other custom data.
+2. Client-Side Load Balancing: Eureka clients can query the registry to get a list of available service instances.
+3. Health Checks: Eureka supports health checks to ensure that only healthy instances are returned to clients. Services
+   can periodically send heartbeats to Eureka to indicate they are alive.
+4. Self-Preservation Mode: In case of network partitions or other issues, Eureka can enter a self-preservation mode
+   where it continues to serve requests based on the last known state of the registry, preventing mass eviction of
+   services.
+5. Scalability: Eureka is designed to be highly available and scalable, allowing multiple instances of the Eureka
+   server to run in a cluster.
+6. Integration with Spring Cloud: Netflix Eureka is well-integrated with Spring Cloud, making it easy to set up service
+   discovery in Spring Boot applications.
+
